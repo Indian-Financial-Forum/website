@@ -34,4 +34,4 @@ jobs:
     - name: Deploying services with an env file
       uses: brunocascio/ecs-deploy@v2.0.0
       with:
-        args: deploy iff-prod-cluster iff-website --image nginx ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.ap-south-1.amazonaws.com/iff-website:${{ github.event.inputs.websitetag }} --timeout -1 
+        args: deploy iff-prod-cluster iff-website-prod --image nginx ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.ap-south-1.amazonaws.com/iff-website:${{ github.event.inputs.websitetag }} --timeout -1 
